@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title M/L
+    body
+        h2 #{v}
+
+        form(action="/select2" method="post")
+            input(type="hidden" name="v" value=v)
+            input(type="hidden" name="p" value="현금결제")
+            button 현금결제
+            if "현금결제" === rev 
+                span !추천!
+        hr
+
+        form(action="/select2" method="post")
+            input(type="hidden" name="v" value=v)
+            input(type="hidden" name="p" value="카드결제")
+            button 카드결제
+            if "카드결제" === rev 
+                span !추천!
+        hr
+
+        form(action="/select2" method="post")
+            input(type="hidden" name="v" value=v)
+            input(type="hidden" name="p" value="삼성페이")
+            button 삼성페이
+            if "삼성페이" === rev 
+                span !추천!
+        hr
+
+        form(action="/select2" method="post")
+            input(type="hidden" name="v" value=v)
+            input(type="hidden" name="p" value="카카오페이")
+            button 카카오페이
+            if "카카오페이" === rev 
+                span !추천!
+        hr
